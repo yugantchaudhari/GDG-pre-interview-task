@@ -1,0 +1,9 @@
+# .dockerignore
+pre_gdg/
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+tests/
+pyrefly.toml
+README.md

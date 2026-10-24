@@ -1,0 +1,9 @@
+# pyrefly.toml
+site-package-path = [
+    "pre_gdg/Lib/site-packages"
+]
+
+search-path = [
+    "app",
+    "tests"
+]

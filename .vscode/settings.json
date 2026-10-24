@@ -1,0 +1,10 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/pre_gdg/Scripts/python.exe",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/app",
+        "${workspaceFolder}/tests"
+    ],
+    "pyrefly.analysis.diagnosticSeverityOverrides": {
+        "missing-import": "none"
+    }
+}

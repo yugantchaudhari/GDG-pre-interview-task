@@ -1,0 +1,65 @@
+{
+  "status": "SUCCESS",
+  "trained_at": "2026-10-24T10:13:47.093290+00:00",
+  "preprocessing_applied": {
+    "duplicates_removed": 1,
+    "categorical_encoding": "OneHotEncoder(binary drop=if_binary) + OneHotEncoder(nominal handle_unknown=ignore)",
+    "numerical_scaling": "PowerTransformer(yeo-johnson) + StandardScaler",
+    "target_skew_transform": "TransformedTargetRegressor(log1p / expm1)",
+    "engineered_features": [
+      "is_obese",
+      "bmi_smoker_interaction",
+      "age_bmi_interaction"
+    ]
+  },
+  "cv_folds": 5,
+  "best_model_selected": "RandomForestRegressor",
+  "selection_criterion": "Highest mean R\u00b2 across CV folds (lowest RMSE on tie)",
+  "leaderboard": [
+    {
+      "rank": 1,
+      "model_name": "RandomForestRegressor",
+      "metrics": {
+        "mae_mean": 2099.237724149563,
+        "mae_std": 138.57425792074685,
+        "rmse_mean": 4555.539896656856,
+        "rmse_std": 374.6756551985101,
+        "r2_mean": 0.8546544703631437,
+        "r2_std": 0.028503162255863735
+      },
+      "is_best": true
+    },
+    {
+      "rank": 2,
+      "model_name": "GradientBoostingRegressor",
+      "metrics": {
+        "mae_mean": 2209.5871336329305,
+        "mae_std": 114.27948829045336,
+        "rmse_mean": 4646.733813365083,
+        "rmse_std": 344.64185049172113,
+        "r2_mean": 0.848692073287814,
+        "r2_std": 0.028585231391657025
+      },
+      "is_best": false
+    },
+    {
+      "rank": 3,
+      "model_name": "LinearRegression",
+      "metrics": {
+        "mae_mean": 4209.478881592922,
+        "mae_std": 490.793067325302,
+        "rmse_mean": 8421.338236177475,
+        "rmse_std": 1255.3383542726315,
+        "r2_mean": 0.48991516434574917,
+        "r2_std": 0.18042853540541554
+      },
+      "is_best": false
+    }
+  ],
+  "saved_artifacts": {
+    "best_pipeline_path": "app\\artifacts\\best_pipeline.joblib",
+    "all_models_path": "app\\artifacts\\all_models.joblib",
+    "metrics_report_path": "app\\artifacts\\evaluation_report.json"
+  },
+  "resilience_metadata": null
+}
