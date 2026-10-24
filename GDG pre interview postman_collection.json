@@ -1,0 +1,127 @@
+{
+  "info": {
+    "_postman_id": "a6ef69cd-9d49-42ee-a989-4a411971d8d2",
+    "name": "GDG pre interview  task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57431250",
+    "_collection_link": "https://go.postman.co/collection/57431250-a6ef69cd-9d49-42ee-a989-4a411971d8d2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/health",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/summary",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/eda/summary",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "eda",
+            "summary"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/model/train",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cv_folds\": 5,\r\n    \"drop_duplicates\": true,\r\n    \"handle_feature_skewness\": true,\r\n    \"apply_log_transform_on_target\": true,\r\n    \"include_bmi_smoker_interaction\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/model/train",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "model",
+            "train"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/predict",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"age\": 34,\r\n    \"sex\": \"male\",\r\n    \"bmi\": 31.4,\r\n    \"children\": 2,\r\n    \"smoker\": \"yes\",\r\n    \"region\": \"southeast\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/predict",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
